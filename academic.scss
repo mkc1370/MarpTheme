@@ -1,0 +1,154 @@
+/* ref : https://zenn.dev/hellorusk/articles/4edf3920dd1a35 */
+/* @theme academic */
+
+@import 'gaia';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+:root {
+  --color-background: white;
+  --color-foreground: #333;
+  --color-highlight: #4285F4;
+  --color-negative: #EA4335;
+}
+
+section {
+  background-image: none;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 25px;
+}
+
+/* https://github.com/marp-team/marpit/issues/271 */
+section::after {
+  font-weight: 700;
+  color : white;
+  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+}
+
+ul ul {
+  font-size: 0.9em;
+}
+
+section h1 {
+  color: var(--color-highlight);
+}
+
+section.lead h1 {
+  color: var(--color-highlight);
+  text-align: left;
+}
+section.lead h1 strong {
+  -webkit-text-stroke: 1px var(--color-highlight);
+}
+section.lead h2 {
+  color: var(--color-highlight);
+  text-align: left;
+}
+section.lead h2 strong {
+  -webkit-text-stroke: 1px var(--color-highlight);
+}
+section.lead h3 {
+  color: var(--color-highlight);
+  text-align: left;
+}
+section.lead h3 strong {
+  -webkit-text-stroke: 1px var(--color-highlight);
+}
+section.lead h4 {
+  color: var(--color-highlight);
+  text-align: left;
+}
+section.lead h4 strong {
+  -webkit-text-stroke: 1px var(--color-highlight);
+}
+section.lead h5 {
+  color: var(--color-highlight);
+  text-align: left;
+}
+section.lead h5 strong {
+  -webkit-text-stroke: 1px var(--color-highlight);
+}
+section.lead p {
+  text-align: right;
+}
+
+header {
+  background-color: var(--color-highlight);
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+footer {
+  background-color: var(--color-highlight);
+  color: white;
+  font-weight: 700;
+}
+
+blockquote {
+  max-width: 90%;
+  border-top: 0.1em dashed #555;
+  font-size: 60%;
+  position: absolute;
+  bottom: 80px;
+}
+blockquote::before {
+  content: "";
+}
+blockquote::after {
+  content: "";
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+/* 青太字用 */
+b, strong {
+  color: var(--color-highlight);
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* 赤太字用 */
+p code,
+ul code,
+td code,
+tr code,
+th code,
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h5 code
+{
+  color: var(--color-negative);
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-left: 0%;
+  margin-top: 0%;
+}
+
+/* テーブルの設定 */
+table {
+  /* テーブル全体を中央寄せ */
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
